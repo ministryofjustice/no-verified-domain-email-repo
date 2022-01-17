@@ -1,15 +1,7 @@
-# Ministry of Justice Template Repository
+# no-verified-domain-email-repo
 
-Use this template to [create a repository] with the default initial files for a Ministry of Justice Github repository, including:
+This repo is linked to the [no-verified-domain-email team]. It contains members of the organisation that do not have an approved and verified MoJ email account linked to their Github account.
 
-* The correct LICENSE
-* Github actions
-* .gitignore file
+No commits will be made on this repo.
 
-Once you have created your repository, please:
-
-* Edit the copy of this README.md file to document your project
-* Grant permissions to the appropriate MoJ teams
-* Setup branch protection
-
-[create a repository]: https://github.com/ministryofjustice/template-repository/generate
+[no-verified-domain-email team]: https://github.com/orgs/ministryofjustice/teams/no-verified-domain-email
