@@ -1,0 +1,17 @@
+name: Change a user into an outside collaborator
+on:
+  workflow_dispatch:
+  schedule:
+    # Run at 00.30am each day
+    - cron: "30 0 * * *"
+  
+jobs:
+  turn-user-into-an-outside-collaborator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: bin/remove-collaborator.rb
+        env:
+          ADMIN_GITHUB_TOKEN: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          REPO: ${{ github.event.inputs.repository }}
+          USERNAME: ${{ github.event.inputs.github_user }}
