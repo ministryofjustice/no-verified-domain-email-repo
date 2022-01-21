@@ -1,0 +1,20 @@
+name: Change a user into an outside collaborator
+on:
+  workflow_dispatch:
+  schedule:
+    # Run at 00.30am each day
+    - cron: "30 0 * * *"
+  
+jobs:
+  turn-user-into-an-outside-collaborator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+            python-version: '3.10'
+            architecture: 'x64'
+            cache: 'pip'
+      - run: |
+          python3 -m pip install -r scripts/requirements.txt
+          python3 scripts/change_user_to_collaborator.py ${{ secrets.ADMIN_GITHUB_TOKEN }}
