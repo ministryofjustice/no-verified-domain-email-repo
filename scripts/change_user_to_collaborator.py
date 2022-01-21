@@ -117,9 +117,8 @@ def fetch_repo_issues() -> list:
 def close_issue(issue_number):
     """Close an issue within the no-verified-domain-email-repo
     Args:
-        issue_number (bool): The issue to close
+        issue_number (int): The issue to close
     """
-    #
     api.issues.update(
         owner="ministryofjustice",
         repo="no-verified-domain-email-repo",
