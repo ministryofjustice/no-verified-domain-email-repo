@@ -1,10 +1,10 @@
 name: Change a user into an outside collaborator
 on:
   workflow_dispatch:
-  schedule:
-    # Run at 00.30am each day
-    - cron: "30 0 * * *"
-  
+#   schedule:
+#     # Run at 00.30am each day
+#     - cron: "30 0 * * *"
+
 jobs:
   turn-user-into-an-outside-collaborator:
     runs-on: ubuntu-latest
